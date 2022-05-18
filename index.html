@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sudoku Solver</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="home" id="home">
+      <div class="home-container">
+        <h1 class="home-heading">Sudoku <span>Solver</span></h1>
+        <p class="home-description">Sudoku is a logic-based, combinatorial number-placement puzzle. In classic Sudoku, the objective is to fill a 9 × 9 grid with digits so that each column, each row, and each of the nine 3 × 3 subgrids that compose the grid contain all of the digits from 1 to 9.</p>
+        <button class="main-btn"><a href="#about">Play Game</a></button>
+      </div>
+    </div>
+
+    <!-- Game Section -->
+    <div class="main" id="about">
+      <div class="main-container">
+        <div id="container">
+          <table id="board">
+            <colgroup><col><col><col>
+            <colgroup><col><col><col>
+            <colgroup><col><col><col>
+            <tbody>
+             <tr> <td id = "1" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "2" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "3" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "4" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "5" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "6" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "7" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "8" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "9" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td>
+             <tr> <td id = "10" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "11" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "12" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "13" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "14" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "15" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "16" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "17" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "18" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td>     
+             <tr> <td id = "19" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "20" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "21" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "22" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "23" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "24" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "25" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "26" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "27" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td>
+            <tbody>
+             <tr> <td id = "28" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "29" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "30" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "31" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "32" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "33" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "34" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "35" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "36" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td>
+             <tr> <td id = "37" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "38" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "39" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "40" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "41" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "42" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "43" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "44" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "45" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td>     
+             <tr> <td id = "46" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "47" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "48" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "49" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "50" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "51" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "52" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "53" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "54" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td>
+            <tbody>
+             <tr> <td id = "55" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "56" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "57" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "58" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "59" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "60" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "61" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "62" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "63" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td>
+             <tr> <td id = "64" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "65" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "66" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "67" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "68" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "69" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "70" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "71" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "72" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td>     
+             <tr> <td id = "73" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "74" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "75" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "76" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "77" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "78" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "79" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "80" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td> <td id = "81" type="number" maxlength="1" max = "9" min = "1" contenteditable="true"></td>
+          </table>
+          </div>
+        <div class="main-content">
+          <h1>Solve Your Sudoku</h1>
+          <h2>Input the entries according to the puzzle you want to solve.</h2>
+          <div>
+            <button class="main-btn" id = "solve-button" onclick="initiate()"><a>Solve</a></button>
+          </div>
+          <div>
+            <button class="main-btn" id="clear-button"><a>Reset</a></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
